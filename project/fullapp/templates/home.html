@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Home" />
+    <meta name="keywords" content="Home" />
+    <meta name="author" content="Home" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/reset.css" />
+    <link rel="stylesheet" href="../static/styles/home.css" />
+    
+</head>
+<body>
+    <div class="navbar">
+        <p class="logo">CONTA CERTA</p>
+        <div class="links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'signup' %}">Cadastre-se</a>
+            <a href="{% url 'signin' %}">Login</a>
+        </div>
+    </div>
+    <div class="main">
+        <p class="logo">CONTA CERTA</p>
+        <p class="slogan">Gestão Financeira Simplificada, Controle Total do Seu Dinheiro!</p>
+    </div>
+</body>
+</html>
