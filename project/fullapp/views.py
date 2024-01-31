@@ -14,7 +14,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # Substitua 'home' pela URL da sua página principal
+            return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'auth/signup.html', {'form': form})
@@ -25,11 +25,14 @@ def signin(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')  # Substitua 'home' pela URL da sua página principal
+            return redirect('home')
     else:
         form = SignInForm()
     return render(request, 'auth/signin.html', {'form': form})
 
 def signout(request):
     logout(request)
-    return redirect('home')  # Substitua 'home' pela URL da sua página principal
+    return redirect('home')
+
+# def createCategory():
+    

@@ -1,6 +1,31 @@
 <!-- signin.html -->
-<form method="post" action="{% url 'signin' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign In</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/styles/reset.css">
+  <link rel="stylesheet" href="../../static/styles/signin.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-login">
+    <div class="left-login">
+      <h1><br>Faça Login<br>E controle já suas finanças!</br></h1>
+      <img src="../../static/img/Progress overview-pana.svg" alt="">
+    </div>
+    <div class="right-login">
+      <div class="card-login">
+        <h1>LOGIN</h1>
+        <form method="post" action="{% url 'signin' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit">ENTRAR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
