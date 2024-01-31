@@ -1,4 +1,6 @@
-<!-- signin.html -->
+{% extends 'base/navbar.html' %}
+{% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,26 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../static/styles/reset.css">
   <link rel="stylesheet" href="../../static/styles/signin.css">
-  <title>Document</title>
+  <title>Login - Conta Certa</title>
 </head>
 <body>
   <div class="main-login">
-    <div class="left-login">
-      <h1><br>Faça Login<br>E controle já suas finanças!</br></h1>
-      <img src="../../static/img/Progress overview-pana.svg" alt="">
+      <h1 class="slogan">
+      Seu caminho para o sucesso financeiro começa aqui. Bem-vindo ao CONTA CERTA.</h1>  
+    <div class="card-login">
+      <h1>LOGIN</h1>
+      <form method="post" action="{% url 'signin' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">ENTRAR</button>
+      </form>
     </div>
-    <div class="right-login">
-      <div class="card-login">
-        <h1>LOGIN</h1>
-        <form method="post" action="{% url 'signin' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">ENTRAR</button>
-        </form>
-      </div>
-    </div>
+  </div>
   </div>
 
 </body>
 </html>
 
+{% endblock %}

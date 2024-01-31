@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/styles/reset.css" />
+        <link rel="stylesheet" href="../static/styles/navbar.css" />
+    </head>
+    <header>
+        <div class="navbar">
+            <a href="{% url 'home' %}" class="logo">CONTA CERTA</a>
+            <div class="links">
+                <a href="{% url 'home' %}" >Home</a>
+                <a href="{% url 'signup' %}">Cadastre-se</a>
+                <a href="{% url 'signin' %}" class="login-button">Login</a>
+            </div>
+        </div>
+    </header>
+</html>
+{% block content %}
+{% endblock %}
