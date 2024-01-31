@@ -3,15 +3,30 @@
 
 {% block content %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/reset.css">
+    <link rel="stylesheet" href="../static/styles/home.css">
     <title>Conta Certa</title>
 </head>
 <body>
-    <p>EM CONSTRUÇÃO</p>
+    <div class="main-container">
+        <div class="hero-container">
+            <h1>Bem-vindo ao CONTA CERTA - Seu Hub Financeiro Pessoal</h1>
+            <p>Gerencie suas finanças com facilidade, precisão e segurança. No CONTA CERTA, proporcionamos uma experiência única para que você possa dominar suas finanças de maneira inteligente e eficiente.</p>
+            <a href="{% url 'signup' %}" class="cta-button">Comece Agora!</a>
+        </div>
+        <div class="hero-cards">
+            <p><strong>Controle Total:</strong> Visualize e analise suas transações, despesas e receitas em um único lugar. Tenha o controle total do seu dinheiro, tornando mais fácil alcançar seus objetivos financeiros.</p>
+            <p><strong>Crie Ordem no Caos:</strong> Organize suas despesas em categorias personalizadas, adicione notas e mantenha-se no topo das suas finanças. Com nosso sistema intuitivo, a gestão financeira nunca foi tão simples.</p>
+            <p><strong>Segurança em Primeiro Lugar:</strong> Priorizamos a segurança dos seus dados. Utilizamos as mais recentes tecnologias de criptografia para garantir que suas informações financeiras permaneçam privadas e protegidas.</p>
+            <p><strong>Liberdade Financeira ao Seu Alcance:</strong> Do controle de gastos diários ao planejamento de investimentos, [Nome do Seu Site] é o seu parceiro confiável para conquistar a liberdade financeira. Comece a trilhar o caminho para o sucesso financeiro hoje mesmo.</p>
+        </div>
+    </div>
 </body>
 </html>
+
 {% endblock %}
 

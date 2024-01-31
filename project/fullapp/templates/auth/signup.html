@@ -1,7 +1,41 @@
-<!-- signup.html -->
-<form method="post" action="{% url 'signup' %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-  </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/styles/reset.css">
+  <link rel="stylesheet" href="../../static/styles/signup.css">
+  <title>Cadastro</title>
+</head>
+<body>
+  <h1 class="logo">CONTA CERTA</h1>
+  <div class="card-login">
+    <div class="calls">
+      <h1>Crie sua conta!</h1>
+      <p>Comece a controlar o seu dinheiro!</p>
+    </div>
+    <div class="google-signup">
+      <img src="../../static/img/google.svg" alt="">
+      <p>Crie com o Google</p>
+    </div>
+    <p class="line-or">Ou</p>
+    <div class="default-signup">
+      <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <label>Usuário</label>
+        {{ form.username}}
+        <label>Email</label>
+        {{ form.email}}
+        <label for="">Senha</label>
+        {{ form.password1}}
+        <label for="">Confirme a Senha</label>
+        {{ form.password2}}
+        <button type="submit">Começar</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
   

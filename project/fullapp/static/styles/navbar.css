@@ -41,7 +41,7 @@
 }
 
 .login-button:hover{
-    background-color: #1890DB;
+    background-color: #86efac;
     border-radius: 15px;
 }
 
@@ -51,6 +51,6 @@
 }
 
 .navbar .logo:hover{
-    color: #4b4b4b;
+    color: #86efac;
     transform: translateX(10%);
 }

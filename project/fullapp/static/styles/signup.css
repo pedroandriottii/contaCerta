@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto:wght@900&display=swap');
+body, html{
+    height: 100%;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F1F4EF;
+}
+
+body .logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: #14532d;
+}
+
+.card-login{
+    background: white;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    box-shadow: 0px 10px 40px #a7a7a783;
+}
+
+.card-login .calls h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: black;
+    margin-bottom: 20px;
+}
+.card-login .calls p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.google-signup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #cacaca;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.google-signup:hover{
+    background-color: #e07816;
+    border-radius: 15px;
+}
+
+.google-signup img{
+    width: 5%;
+}
+
+.google-signup p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.default-signup form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.default-signup label{
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+}
+
+.default-signup input {
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 480px;
+}
+
+.default-signup input:focus{
+    border: 1px solid #6dbb64;
+    box-shadow: 0px 10px 40px #43ee8256;
+    outline: none;
+}
+
+.default-signup button{
+    margin-top: 20px;
+    background-color: #22c55e;
+    box-shadow: 0px 10px 40px #43ee81d8;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    transition-property: background-color, border-radius;
+    transition-duration: 1s;
+    border: none;
+}
+
+.default-signup button:hover{
+    background-color: #86efac;
+    border-radius: 15px;
+}
+
+.line-or {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
