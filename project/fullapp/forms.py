@@ -12,7 +12,7 @@ class SignUpFormPart2(forms.ModelForm):
         model = User
         fields = ('name',)
 
-# class SignUpFormPart2(forms.ModelForm):
+# class SignUpFormPart3(forms.ModelForm):
 #     class Meta:
 #         model = User
 #         fields = ('options')

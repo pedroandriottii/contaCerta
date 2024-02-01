@@ -5,7 +5,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Category, Transaction
 from django.db.models import Sum
 
-
 def index(request):
     if request.user.is_authenticated:
         return render(request, 'authenticatedUser.html')

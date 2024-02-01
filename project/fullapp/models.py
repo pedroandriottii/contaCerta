@@ -23,7 +23,7 @@ class Category(models.Model):
 @receiver(post_save, sender=User)
 def create_default_categories(sender, instance, created, **kwargs):
     if created:
-        default_categories = ['Assinaturas', 'Lazer', 'Investimentos', 'Alimentação', 'Transporte', 'Total']  # Adicione suas categorias padrões aqui
+        default_categories = ['Assinaturas', 'Lazer', 'Investimentos', 'Alimentação', 'Transporte', 'Total']
 
         for category_title in default_categories:
             Category.objects.create(user=instance, title=category_title)

@@ -4,12 +4,12 @@
     <title>Create Transaction</title>
 </head>
 <body>
-    <h1>Create Transaction</h1>
+    <h1>Criar uma Transação</h1>
     <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
-    <a href="{% url 'TransactionList' %}">Back to Transaction List</a>
+    <a href="{% url 'TransactionList' %}">Voltar para a Lista de Transações</a>
 </body>
 </html>

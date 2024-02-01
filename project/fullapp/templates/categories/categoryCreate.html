@@ -4,12 +4,12 @@
     <title>Create Category</title>
 </head>
 <body>
-    <h1>Create Category</h1>
+    <h1>Criar Categoria</h1>
     <form method="post" action="">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save</button>
     </form>
-    <a href="{% url 'category_list' %}">Back to Category List</a>
+    <a href="{% url 'category_list' %}">Volta para a lista de categorias</a>
 </body>
 </html>
