@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/styles/reset.css">
+    <link rel="stylesheet" href="../../static/styles/signUpPart2.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <div class="info">
+                <img src="../../static/img/progress-bar.svg" alt="">
+                <h1>Estamos quase prontos...</h1>
+                <p>Vamos nos conhecer melhor para começarmos nosso trabalho!</p>
+            <div>
+            <div class="name-input">
+                <form method="post" action="{% url 'signUpPart2' %}">
+                    {% csrf_token %}
+                    <label>Como podemos te chamar?</label>
+                    {{ form.name }}
+                    <button type="submit"><img src="../../static/img/arrow_forward_ios_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

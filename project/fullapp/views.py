@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-from .forms import SignUpForm, SignInForm
+from .forms import SignUpForm, SignUpFormPart2, SignInForm
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -14,10 +15,21 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')
+            return redirect('signUpPart2')
     else:
         form = SignUpForm()
     return render(request, 'auth/signup.html', {'form': form})
+
+@login_required
+def signUpPart2(request):
+    if request.method == 'POST':
+        form = SignUpFormPart2(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = SignUpFormPart2(instance=request.user)
+    return render(request, 'auth/signupName.html', {'form': form})
 
 def signin(request):
     if request.method == 'POST':
@@ -34,5 +46,4 @@ def signout(request):
     logout(request)
     return redirect('home')
 
-# def createCategory():
     
