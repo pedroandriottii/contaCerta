@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction List</title>
+</head>
+<body>
+    <h1>Transactions</h1>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.user.name }} - {{ transaction.category.title }} - R${{ transaction.amount }} - {{ transaction.date }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'CreateTransaction' %}">Create Transaction</a>
+</body>
+</html>

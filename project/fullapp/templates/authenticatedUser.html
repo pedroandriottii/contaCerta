@@ -17,10 +17,10 @@
     </div>
     <div class="main-content">
         <h1>Visão Geral</h1>
-        <p>Saldo Atual: R$ {{ user.profile.balance }}</p>
-        <p>Receitas: R$ {{ user.profile.income }}</p>
-        <p>Despesas: R$ {{ user.profile.expenses }}</p>
-        <p>Saldo Atual: R$ {{ user.profile.balance }}</p>
+        <a href="{% url 'category_list' %}">Categorias</a>
+        <a href="{% url 'TransactionList' %}">Transações</a>
+        <a href="{% url 'CreateTransaction' %}">Registrar Movimentação</a>
+        <a href="{% url 'CategoryTotalSpent' %}">Visão Geral</a>
     </div>
     
     <a href="{% url 'signout' %}">Logout</a>
