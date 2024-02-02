@@ -36,6 +36,24 @@ header .navbar .links a{
     font-size: 16px;
     color: #fff;
     text-decoration: none;
+    position: relative;
+}
+
+header .navbar .links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header .navbar .links a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 header .navbar .right-content{

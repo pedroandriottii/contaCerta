@@ -8,19 +8,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/reset.css">
-    <link rel="stylesheet" href="../static/styles/menu.css">
+    <link rel="stylesheet" href="../static/styles/authenticatedUser.css">
     <title>Início</title>
 </head>
 <body>
     <div class="content">
-        <h1>CONTA CERTA</h1>
         <h1>Olá, {{ user.name }}!</h1>
     </div>
     <div class="main-content">
-        <a href="{% url 'CreateTransaction' %}">Registrar Movimentação</a>
     </div>
     
-    <a href="{% url 'signout' %}">Logout</a>
 </body>
 </html>
 {% endblock %}
