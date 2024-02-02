@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/styles/reset.css">
+    <link rel="stylesheet" href="../../static/styles/navbarAuthenticated.css">
+    <title></title>
+</head>
+<header>
+    <div class="navbar">    
+        <a href="{% url 'home' %}" class="logo">CONTA CERTA</a>
+        <div class="links">
+            <a href="{% url 'home' %}">Visão Geral</a>
+            <a href="{% url 'TransactionList' %}">Movimentações</a>
+            <a href="{% url 'CategoryTotalSpent' %}">Relatórios</a>
+            <a href="">Limite de Gastos</a>
+        </div>
+        <div class="right-content">
+            <a href=""><img src="../../static/img/account.svg" alt=""></a>
+            <a href="{% url 'signout' %}"><img src="../../static/img/logout.svg" alt=""></a>
+        <div class="icons">
+
+        </div>
+    </div>
+</header>
+</html>
+{% block content %}
+{% endblock %}

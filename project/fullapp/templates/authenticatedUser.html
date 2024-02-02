@@ -1,4 +1,7 @@
+{% extends 'base/navbarAuthenticated.html' %}
+{% load static %}
 
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +12,15 @@
     <title>Início</title>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="content">
         <h1>CONTA CERTA</h1>
         <h1>Olá, {{ user.name }}!</h1>
-        <p>Visão Geral</p>
-        <p>Registrar Movimentações</p>
     </div>
     <div class="main-content">
-        <h1>Visão Geral</h1>
-        <a href="{% url 'category_list' %}">Categorias</a>
-        <a href="{% url 'TransactionList' %}">Transações</a>
         <a href="{% url 'CreateTransaction' %}">Registrar Movimentação</a>
-        <a href="{% url 'CategoryTotalSpent' %}">Visão Geral</a>
     </div>
     
     <a href="{% url 'signout' %}">Logout</a>
 </body>
 </html>
+{% endblock %}

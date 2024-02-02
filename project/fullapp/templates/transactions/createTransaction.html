@@ -1,3 +1,7 @@
+{% extends 'base/navbarAuthenticated.html' %}
+{% load static %}
+
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,3 +17,4 @@
     <a href="{% url 'TransactionList' %}">Voltar para a Lista de Transações</a>
 </body>
 </html>
+{% endblock %}

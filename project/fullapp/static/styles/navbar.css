@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #171717;
+    background-color: #22c55e;
     padding: 10px 50px;
 }
 
@@ -32,15 +32,16 @@
     text-decoration: none;
 }
 
-.login-button{
-    background-color: #383838;
+.signup-button{
+    background-color: #14532d;
     border-radius: 10px;
     padding: 10px;
+    margin-left: 0px;
     transition-property: background-color, border-radius;
     transition-duration: 1s;
 }
 
-.login-button:hover{
+.signup-button:hover{
     background-color: #86efac;
     border-radius: 15px;
 }
